@@ -4,7 +4,7 @@ Este repositorio contiene el código fuente de mi portafolio profesional, desarr
 El sitio presenta mi experiencia, habilidades técnicas y trayectoria profesional de forma interactiva y responsiva.
 
 🔗 **Portafolio en línea:**  
-https://marcelo-valdes.github.io/mi-perfil-interactivo
+https://marcelo-valdes.github.io/mi-trayectoria-tecnica/
 
 ---
 
@@ -36,7 +36,7 @@ mi-perfil-interactivo/
 ## 🚀 Cómo visualizar el portafolio
 Puedes acceder al sitio directamente desde GitHub Pages:
 
-**https://marcelo-valdes.github.io/mi-perfil-interactivo**
+**https://marcelo-valdes.github.io/mi-trayectoria-tecnica**
 
 Si deseas ejecutarlo localmente:
 1. Clona este repositorio  
