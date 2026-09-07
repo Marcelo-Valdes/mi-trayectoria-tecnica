@@ -100,7 +100,7 @@
 		  }
 		  
 		  /* Mantiene unidos los bloques de experiencia, gráfico y cuadrícula de insignias */
-		  section, article, .bloque-experiencia, .chart-container, .grid-insignias {
+		  section, article, .bloque-experiencia, .chart-container{
 			page-break-inside: avoid;
 			margin-bottom: 12px !important; 
 			padding: 0 !important;
@@ -117,8 +117,8 @@
 		  /* 6. Cuadrícula para las insignias de AWS e IPSS */
 		  .grid-insignias {
 			display: grid !important;
-			grid-template-columns: repeat(4, 1fr) !important; 
-			gap: 10px !important;
+			grid-template-columns: repeat(3, 1fr) !important; 
+			gap: 15px !important;
 		  }
 
 		  /* 6.1 Control estricto del tamaño de los logos dentro de las tarjetas */
