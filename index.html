@@ -75,7 +75,7 @@
 		}
 
 		@media print {
-		  /* 1. Ocultar UI e instrucciones web (Añade la clase .texto-instruccion-web a tu HTML) */
+		  /* 1. Ocultar UI e instrucciones web */
 		  nav, footer, .btn-imprimir, .menu-navegacion, #openContactModalBtn, .texto-instruccion-web {
 			display: none !important;
 		  }
@@ -86,89 +86,89 @@
 			size: A4 portrait;
 		  }
 
-		  /* 3. Forzar la impresión de fondos (Vital para que los tags de Habilidades mantengan su color) */
+		  /* 3. Forzar la impresión de fondos (Vital para tags de Habilidades y tarjetas) */
 		  * {
 			-webkit-print-color-adjust: exact !important;
 			print-color-adjust: exact !important;
 		  }
 
-		  /* 4. Controlar saltos de página y agrupar elementos */
+		  /* 4. Controlar saltos de página de títulos y contenedores indivisibles */
 		  h1, h2, h3 {
 			page-break-after: avoid;
 			margin-top: 15px !important;
 			margin-bottom: 5px !important;
 		  }
 		  
-		  /* Mantiene unidos los bloques de experiencia, gráfico y cuadrícula de insignias */
-		  section, article, .bloque-experiencia, .chart-container{
+		  /* Se eliminó 'section' de aquí para permitir que la Experiencia fluya en varias páginas */
+		  article, .bloque-experiencia, .chart-container {
 			page-break-inside: avoid;
 			margin-bottom: 12px !important; 
-			padding: 0 !important;
 		  }
 
-		  /* 5. Legibilidad y empaquetado para tamaño Carta */
+		  /* 5. Legibilidad y empaquetado general */
 		  html, body {
 			background: white !important;
 			color: black !important;
 			font-size: 9pt !important;
-			line-height: 1.25 !important; /* Ligeramente más compacto */
+			line-height: 1.25 !important;
 		  }
 
-		  /* 6. Cuadrícula para las insignias de AWS e IPSS */
+		  /* 6. Cuadrícula para las insignias (3 columnas) */
 		  .grid-insignias {
 			display: grid !important;
 			grid-template-columns: repeat(3, 1fr) !important; 
 			gap: 15px !important;
 		  }
 
-		  /* 6.1 Control estricto del tamaño de los logos dentro de las tarjetas */
 		  .grid-insignias img {
-			max-width: 70px !important; /* Limita el ancho para que quepan las 4 columnas */
+			max-width: 70px !important; 
 			height: auto !important;
 			margin: 0 auto !important;
 		  }
 
-		  /* 7. Ajuste del gráfico de radar para evitar desbordes verticales */
+		  /* 7. Ajuste del gráfico de radar */
 		  canvas, img, svg {
-			max-width: 65% !important; /* Reducido levemente para ajustarse mejor a Carta */
+			max-width: 65% !important; 
 			height: auto !important;
 			display: block;
 			margin: 0 auto;
 		  }
-		  /* 9. Forzar dos columnas en Sello Profesional para impresión */
+
+		  /* 8. Juntar secciones (Reemplaza los py-20 de Tailwind) */
+		  section {
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+			margin-top: 0 !important;
+			margin-bottom: 15px !important;
+			page-break-inside: auto !important; /* Permite saltos de página naturales */
+		  }
+
+		  section h2 {
+			margin-bottom: 15px !important;
+		  }
+
+		  /* 9. Sello Profesional (2 columnas) */
 		  .sello-columnas {
 			display: grid !important;
 			grid-template-columns: repeat(2, 1fr) !important;
-			gap: 20px !important;
+			gap: 15px !important;
 			margin-bottom: 10px !important;
-			page-break-inside: avoid; /* Evita que las listas se separen en dos páginas */
+			page-break-inside: avoid;
 		  }
-		  /* 10 Forzar 2 columnas en Formación Académica para impresión */
+
+		  /* 10. Formación Académica (2 columnas) */
 		  .grid-formacion {
 			display: grid !important;
 			grid-template-columns: repeat(2, 1fr) !important;
 			gap: 15px !important;
 		  }
 
-		  /* 11 Evitar que una tarjeta de estudio se corte entre dos páginas */
+		  /* 11. Evitar que las tarjetas individuales se corten por la mitad */
 		  .grid-formacion > div {
 			break-inside: avoid;
 		  }
-
-		  /* 12 Juntar secciones: anular los paddings/margins grandes de Tailwind (como py-20) */
-		  section {
-			padding-top: 15px !important;
-			padding-bottom: 15px !important;
-			margin-top: 0 !important;
-			margin-bottom: 15px !important;
-		  }
-
-		  /* 13 Reducir espacio debajo de los títulos principales de cada sección */
-		  section h2 {
-			margin-bottom: 15px !important;
-		  }
 		}
-	
+
 
     </style>
 </head>
