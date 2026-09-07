@@ -136,6 +136,13 @@
 			gap: 10px !important;
 		  }
 
+		  /* 6.1 Control estricto del tamaño de los logos dentro de las tarjetas */
+		  .grid-insignias img {
+			max-width: 70px !important; /* Limita el ancho para que quepan las 4 columnas */
+			height: auto !important;
+			margin: 0 auto !important;
+		  }
+
 		  /* 7. Ajuste del gráfico de radar para evitar desbordes verticales */
 		  canvas, img, svg {
 			max-width: 65% !important; /* Reducido levemente para ajustarse mejor a Carta */
@@ -399,7 +406,7 @@
         <section id="certificaciones" class="py-20 bg-white">
             <div class="max-w-4x1 mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Insignias Digitales</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 grid-insignias">
                     <a href="https://view.pok.tech/c/f342b77d-ca4e-48a2-a548-889fb7e35e49" target="_blank" class="badge-card">
 					<h3 class="font-bold text-gray-800 flex-grow">Insignia IPSS</h3>
 					<br>
