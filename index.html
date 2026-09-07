@@ -193,6 +193,26 @@
 			page-break-inside: avoid !important;
 			break-inside: avoid !important;
 		  }
+		  /* 17. Forzar que los títulos de los cargos NUNCA se separen de su descripción */
+		  .bloque-experiencia h3, 
+		  .bloque-experiencia h4,
+		  #experiencia h3 {
+			break-after: avoid !important;
+			page-break-after: avoid !important;
+		  }
+
+		  /* 18. Consolidar el bloque completo para que no se parta internamente */
+		  .bloque-experiencia {
+			break-inside: avoid !important;
+			page-break-inside: avoid !important;
+			display: inline-block; /* Truco técnico: fuerza a WebKit a tratar el div como un solo bloque sólido */
+			width: 100%;
+		  }
+
+		  /* Opcional: Si creaste la clase ocultar-impresion para el carrusel móvil, declárala aquí */
+		  .ocultar-impresion {
+			display: none !important;
+		  }
 		}
 
 
