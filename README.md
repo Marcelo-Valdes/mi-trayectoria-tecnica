@@ -58,6 +58,6 @@ El portafolio incluye:
 
 ## 👨‍💻 Autor
 **Marcelo Andrés Valdés Jiménez**  
-Talca, Región del Maule, Chile  
+Chile  
 GitHub: https://github.com/Marcelo-Valdes  
 Email: marcelo.valdes.j@gmail.com
