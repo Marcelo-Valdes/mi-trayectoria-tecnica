@@ -776,181 +776,178 @@
 				</div>
 			</footer>
 
-     <script>
-	 	 
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            const skillsData = [
-                { name: 'Cisco', category: 'Networking' }, { name: 'Avaya', category: 'Networking' }, { name: 'Teldat', category: 'Networking' }, { name: 'Routing', category: 'Networking' }, { name: 'Switching', category: 'Networking' }, { name: 'Troubleshooting', category: 'Networking' }, { name: 'VoIP', category: 'Networking' }, { name: 'Telefonía IP', category: 'Networking' }, { name: 'SDWAN', category: 'Networking' }, { name: 'Fundamentos CCNA Voice (formación)', category: 'Networking' },  { name: 'Fundamentos CCNA (formación)', category: 'Networking' }, { name: 'Gestión de Redes', category: 'Networking' }, { name: 'Fundamentos CCNP (formación)', category: 'Networking' },
-				{ name: 'Arquitectura Cloud', category: 'Cloud' }, { name: 'Machine Learning Foundations', category: 'Cloud' }, { name: 'AWS Foundations (formación)', category: 'Cloud' }, { name: 'Azure Foundations (formación)', category: 'Cloud' }, { name: 'Cloud Developing', category: 'Cloud' }, { name: 'Cloud Foundations', category: 'Cloud' }, { name: 'VPC', category: 'Cloud' },
-                { name: 'Microsoft Windows Server/Workstation', category: 'Software y Aplicaciones' }, { name: 'Linux', category: 'Software y Aplicaciones' }, { name: 'Microsoft Office', category: 'Software y Aplicaciones' },  { name: 'Salesforce', category: 'Software y Aplicaciones' }, { name: 'AutoCad', category: 'Software y Aplicaciones' }, { name: 'Admin. de BD', category: 'Software y Aplicaciones' },
-                { name: 'Firewall', category: 'Ciberseguridad' }, { name: 'Fundamentos CCNA Security (formación)', category: 'Ciberseguridad' }, { name: 'Ciberseguridad', category: 'Ciberseguridad' }, { name: 'Continuidad Operativa', category: 'Ciberseguridad' }, { name: 'Resolución de Incidentes', category: 'Ciberseguridad' },{ name: 'Security Cloud Fundations', category: 'Ciberseguridad' },
-                { name: 'Gestión de Servicios', category: 'Gestión y Operaciones' }, { name: 'Gestión de Proyectos(curso)', category: 'Gestión y Operaciones' }, { name: 'ITIL', category: 'Gestión y Operaciones' }, { name: 'Gestión de Proveedores', category: 'Gestión y Operaciones' }, { name: 'Control de Gestión', category: 'Gestión y Operaciones' }, { name: 'SLA y KPI', category: 'Gestión y Operaciones' }, { name: 'BMC Remedy', category: 'Gestión y Operaciones' },  { name: 'Validación de Documentación Técnica', category: 'Gestión y Operaciones' },
-				{ name: 'Servidores', category: 'Hardware e Infraestructura' }, { name: 'Estaciones de Trabajo', category: 'Hardware e Infraestructura' },  { name: 'Racks y Cableado', category: 'Hardware e Infraestructura' },  { name: 'Electricidad', category: 'Hardware e Infraestructura' },  { name: 'Routers y Switches', category: 'Hardware e Infraestructura' },{ name: 'Equipamiento de telecomunicaciones', category: 'Hardware e Infraestructura' },
-            ];
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const skillsData = [
+            { name: 'Cisco', category: 'Networking' }, { name: 'Avaya', category: 'Networking' }, { name: 'Teldat', category: 'Networking' }, { name: 'Routing', category: 'Networking' }, { name: 'Switching', category: 'Networking' }, { name: 'Troubleshooting', category: 'Networking' }, { name: 'VoIP', category: 'Networking' }, { name: 'Telefonía IP', category: 'Networking' }, { name: 'SDWAN', category: 'Networking' }, { name: 'Fundamentos CCNA Voice (formación)', category: 'Networking' },  { name: 'Fundamentos CCNA (formación)', category: 'Networking' }, { name: 'Gestión de Redes', category: 'Networking' }, { name: 'Fundamentos CCNP (formación)', category: 'Networking' },
+            { name: 'Arquitectura Cloud', category: 'Cloud' }, { name: 'Machine Learning Foundations', category: 'Cloud' }, { name: 'AWS Foundations (formación)', category: 'Cloud' }, { name: 'Azure Foundations (formación)', category: 'Cloud' }, { name: 'Cloud Developing', category: 'Cloud' }, { name: 'Cloud Foundations', category: 'Cloud' }, { name: 'VPC', category: 'Cloud' },
+            { name: 'Microsoft Windows Server/Workstation', category: 'Software y Aplicaciones' }, { name: 'Linux', category: 'Software y Aplicaciones' }, { name: 'Microsoft Office', category: 'Software y Aplicaciones' },  { name: 'Salesforce', category: 'Software y Aplicaciones' }, { name: 'AutoCad', category: 'Software y Aplicaciones' }, { name: 'Admin. de BD', category: 'Software y Aplicaciones' },
+            { name: 'Firewall', category: 'Ciberseguridad' }, { name: 'Fundamentos CCNA Security (formación)', category: 'Ciberseguridad' }, { name: 'Ciberseguridad', category: 'Ciberseguridad' }, { name: 'Continuidad Operativa', category: 'Ciberseguridad' }, { name: 'Resolución de Incidentes', category: 'Ciberseguridad' },{ name: 'Security Cloud Fundations', category: 'Ciberseguridad' },
+            { name: 'Gestión de Servicios', category: 'Gestión y Operaciones' }, { name: 'Gestión de Proyectos(curso)', category: 'Gestión y Operaciones' }, { name: 'ITIL', category: 'Gestión y Operaciones' }, { name: 'Gestión de Proveedores', category: 'Gestión y Operaciones' }, { name: 'Control de Gestión', category: 'Gestión y Operaciones' }, { name: 'SLA y KPI', category: 'Gestión y Operaciones' }, { name: 'BMC Remedy', category: 'Gestión y Operaciones' },  { name: 'Validación de Documentación Técnica', category: 'Gestión y Operaciones' },
+            { name: 'Servidores', category: 'Hardware e Infraestructura' }, { name: 'Estaciones de Trabajo', category: 'Hardware e Infraestructura' },  { name: 'Racks y Cableado', category: 'Hardware e Infraestructura' },  { name: 'Electricidad', category: 'Hardware e Infraestructura' },  { name: 'Routers y Switches', category: 'Hardware e Infraestructura' },{ name: 'Equipamiento de telecomunicaciones', category: 'Hardware e Infraestructura' },
+        ];
 
-            const skillsContainer = document.getElementById('skills-container');
-            skillsData.forEach(skill => {
-                const tag = document.createElement('span');
-                tag.className = 'skill-tag bg-gray-100 text-gray-800 text-sm font-medium px-4 py-2 rounded-full';
-                tag.textContent = skill.name;
-                tag.dataset.category = skill.category;
-                skillsContainer.appendChild(tag);
-            });
-            
-            const filterButtons = document.querySelectorAll('.skill-filter-btn');
-            const skillTags = document.querySelectorAll('.skill-tag');
+        const skillsContainer = document.getElementById('skills-container');
+        skillsData.forEach(skill => {
+            const tag = document.createElement('span');
+            // CAMBIO 1: Se inyecta la clase 'hidden' por defecto para que no se muestren al cargar la página.
+            tag.className = 'skill-tag hidden bg-gray-100 text-gray-800 text-sm font-medium px-4 py-2 rounded-full';
+            tag.textContent = skill.name;
+            tag.dataset.category = skill.category;
+            skillsContainer.appendChild(tag);
+        });
+        
+        const filterButtons = document.querySelectorAll('.skill-filter-btn');
+        const skillTags = document.querySelectorAll('.skill-tag');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.dataset.filter;
-                    
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active', 'bg-blue-600', 'text-white');
-                        btn.classList.add('bg-gray-200', 'text-gray-700');
-                    });
-                    
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                
+                // CAMBIO 2: Resetear todos los botones a color gris (incluyendo estados azules o oscuros previos).
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-blue-600', 'bg-slate-800', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // CAMBIO 3: Asignar color al botón seleccionado (Oscuro para Reset, Azul para Categorías).
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                if (filter === 'none') {
+                    button.classList.add('active', 'bg-slate-800', 'text-white');
+                } else {
                     button.classList.add('active', 'bg-blue-600', 'text-white');
-                    button.classList.remove('bg-gray-200', 'text-gray-700');
+                }
 
-                    skillTags.forEach(tag => {
-                        if (filter === 'all' || tag.dataset.category === filter) {
-                            tag.classList.remove('hidden');
-                        } else {
-                            tag.classList.add('hidden');
-                        }
-                    });
+                // CAMBIO 4: Lógica de visualización. Mostrar solo la categoría activa u ocultar todo si es "none".
+                skillTags.forEach(tag => {
+                    if (filter === 'none') {
+                        tag.classList.add('hidden');
+                    } else if (tag.dataset.category === filter) {
+                        tag.classList.remove('hidden');
+                    } else {
+                        tag.classList.add('hidden');
+                    }
                 });
             });
+        });
 
-            const ctx = document.getElementById('skillsChart').getContext('2d');
-            const skillsChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['Networking', 'Cloud', 'Ciberseguridad', 'Gestión y Operaciones', 'Software y Aplicaciones', 'Hardware e Infraestructura'],
-                    datasets: [{
-                        label: 'Nivel de Experiencia y Foco Actual',
-                        data: [4.5, 3.5, 3.5, 4.5, 4.0, 4.5],
-                        backgroundColor: 'rgba(37, 99, 235, 0.2)',
-                        borderColor: 'rgba(37, 99, 235, 1)',
-                        borderWidth: 2,
-                        pointBackgroundColor: 'rgba(37, 99, 235, 1)',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: 'rgba(37, 99, 235, 1)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
-                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
-                            pointLabels: { 
-                                font: { size: 12, weight: 'bold' },
-                                color: '#3d3d3d'
-                            },
-                            ticks: {
-                                backdropColor: 'rgba(248, 247, 244, 0)',
-                                color: 'rgba(61, 61, 61, 0.7)',
-                                stepSize: 1,
-                                display: false
-                            },
-                            min: 0,
-                            max: 5
-                        }
-                    },
-                    plugins: {
-                        legend: {
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Networking', 'Cloud', 'Ciberseguridad', 'Gestión y Operaciones', 'Software y Aplicaciones', 'Hardware e Infraestructura'],
+                datasets: [{
+                    label: 'Nivel de Experiencia y Foco Actual',
+                    data: [4.5, 3.5, 3.5, 4.5, 4.0, 4.5],
+                    backgroundColor: 'rgba(37, 99, 235, 0.2)',
+                    borderColor: 'rgba(37, 99, 235, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(37, 99, 235, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(37, 99, 235, 1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { 
+                            font: { size: 12, weight: 'bold' },
+                            color: '#3d3d3d'
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(248, 247, 244, 0)',
+                            color: 'rgba(61, 61, 61, 0.7)',
+                            stepSize: 1,
                             display: false
                         },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    const value = context.raw;
-                                    let level = '';
-                                    if (value >= 5) level = 'Experto';
-                                    else if (value >= 4.5) level = 'Avanzado / Experto';
-                                    else if (value >= 4) level = 'Avanzado';
-                                    else if (value >= 3) level = 'Competente / Avanzado';
-                                    return `${context.label}: ${level}`;
+                        min: 0,
+                        max: 5
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
                                 }
+                                const value = context.raw;
+                                let level = '';
+                                if (value >= 5) level = 'Experto';
+                                else if (value >= 4.5) level = 'Avanzado / Experto';
+                                else if (value >= 4) level = 'Avanzado';
+                                else if (value >= 3) level = 'Competente / Avanzado';
+                                return `${context.label}: ${level}`;
                             }
                         }
                     }
                 }
-            });
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('main > section');
-            const navbar = document.getElementById('navbar');
-            const navHeight = navbar.offsetHeight;
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - navHeight - 50;
-                    if (pageYOffset >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            });
+            }
         });
-		
-		document.addEventListener('DOMContentLoaded', function() {
-            const contactModal = document.getElementById('contactModal');
-            const openBtn = document.getElementById('openContactModalBtn');
-            const closeBtn = document.getElementById('closeContactModalBtn');
 
-            // Función para abrir el modal
-            const openModal = () => {
-                contactModal.classList.remove('hidden');
-            };
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main > section');
+        const navbar = document.getElementById('navbar');
+        const navHeight = navbar.offsetHeight;
 
-            // Función para cerrar el modal
-            const closeModal = () => {
-                contactModal.classList.add('hidden');
-            };
-
-            // Eventos
-            openBtn.addEventListener('click', openModal);
-            closeBtn.addEventListener('click', closeModal);
-
-            // Cerrar el modal haciendo clic fuera de él (en el overlay)
-            contactModal.addEventListener('click', (event) => {
-                if (event.target === contactModal) {
-                    closeModal();
-                }
-            });
-            
-            // Cerrar el modal con la tecla "Escape"
-            window.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && !contactModal.classList.contains('hidden')) {
-                    closeModal();
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navHeight - 50;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
                 }
             });
 
-            // --- Tu script existente para habilidades y navegación ---
-            const skillsData = [
-                // ... (tu data de skills)
-            ];
-            // ... (el resto de tu script)
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
         });
-		
- document.addEventListener('DOMContentLoaded', function() {
-        // --- SCRIPT PARA EL MODAL DE INFORMACIÓN DINÁMICO ---
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactModal = document.getElementById('contactModal');
+        const openBtn = document.getElementById('openContactModalBtn');
+        const closeBtn = document.getElementById('closeContactModalBtn');
+
+        const openModal = () => {
+            contactModal.classList.remove('hidden');
+        };
+
+        const closeModal = () => {
+            contactModal.classList.add('hidden');
+        };
+
+        openBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+
+        contactModal.addEventListener('click', (event) => {
+            if (event.target === contactModal) {
+                closeModal();
+            }
+        });
+        
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !contactModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
         const infoModal = document.getElementById('infoModal');
         const openTriggers = document.querySelectorAll('.info-modal-trigger');
         const closeBtn = document.getElementById('closeInfoModalBtn');
@@ -968,7 +965,7 @@
 
             modalIconContainer.innerHTML = infoIconSvg;
             modalTitle.textContent = infoType;
-            // Para la ubicación, abre en una nueva pestaña
+            
             const target = infoType === 'Ubicación' ? 'target="_blank" rel="noopener noreferrer"' : '';
             modalInfoContainer.innerHTML = `<a href="${infoHref}" ${target} class="text-lg text-gray-800 break-all hover:text-blue-600 transition-colors">${infoText}</a>`;
             
@@ -979,7 +976,6 @@
             infoModal.classList.add('hidden');
         };
 
-        // Eventos
         openTriggers.forEach(trigger => trigger.addEventListener('click', openModal));
         closeBtn.addEventListener('click', closeModal);
         infoModal.addEventListener('click', (event) => {
@@ -988,8 +984,6 @@
         window.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !infoModal.classList.contains('hidden')) closeModal();
         });
-
-        // (Aquí iría el resto de tu script para las habilidades y la navegación, si lo tienes)
     });
 </script>
 
