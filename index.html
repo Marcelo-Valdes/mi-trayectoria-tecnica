@@ -167,6 +167,32 @@
 		  #formacion .grid-formacion > div {
 			break-inside: avoid;
 		  }
+		  
+		  /* 13. Reducir el espacio masivo entre el Título principal y Sobre Mí */
+		  header, #inicio {
+			padding-top: 0 !important;
+			padding-bottom: 5px !important;
+			margin-bottom: 0 !important;
+		  }
+		  #sobre-mi {
+			padding-top: 10px !important;
+			margin-top: 0 !important;
+		  }
+
+		  /* 14. Evitar que un cargo en Experiencia Profesional se parta en dos páginas */
+		  #experiencia > div, 
+		  .bloque-experiencia {
+			page-break-inside: avoid !important;
+			break-inside: avoid !important;
+			margin-bottom: 15px !important;
+		  }
+
+		  /* 15. Evitar que las tarjetas de Insignias Digitales se corten por la mitad */
+		  .grid-insignias > a, 
+		  .grid-insignias > div {
+			page-break-inside: avoid !important;
+			break-inside: avoid !important;
+		  }
 		}
 
 
