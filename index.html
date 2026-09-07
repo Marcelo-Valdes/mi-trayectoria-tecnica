@@ -88,6 +88,63 @@
         .text-justify-mobile {
             text-align: justify;
 		}
+
+		@media print {
+		  /* 1. Ocultar UI e instrucciones web (Añade la clase .texto-instruccion-web a tu HTML) */
+		  nav, footer, .btn-imprimir, .menu-navegacion, #openContactModalBtn, .texto-instruccion-web {
+			display: none !important;
+		  }
+
+		  /* 2. Definir tamaño Carta y optimizar márgenes perimetrales */
+		  @page {
+			margin: 1.2cm;
+			size: A4 portrait;
+		  }
+
+		  /* 3. Forzar la impresión de fondos (Vital para que los tags de Habilidades mantengan su color) */
+		  * {
+			-webkit-print-color-adjust: exact !important;
+			print-color-adjust: exact !important;
+		  }
+
+		  /* 4. Controlar saltos de página y agrupar elementos */
+		  h1, h2, h3 {
+			page-break-after: avoid;
+			margin-top: 15px !important;
+			margin-bottom: 5px !important;
+		  }
+		  
+		  /* Mantiene unidos los bloques de experiencia, gráfico y cuadrícula de insignias */
+		  section, article, .bloque-experiencia, .chart-container, .grid-insignias {
+			page-break-inside: avoid;
+			margin-bottom: 12px !important; 
+			padding: 0 !important;
+		  }
+
+		  /* 5. Legibilidad y empaquetado para tamaño Carta */
+		  html, body {
+			background: white !important;
+			color: black !important;
+			font-size: 9pt !important;
+			line-height: 1.25 !important; /* Ligeramente más compacto */
+		  }
+
+		  /* 6. Cuadrícula para las insignias de AWS e IPSS */
+		  .grid-insignias {
+			display: grid !important;
+			grid-template-columns: repeat(4, 1fr) !important; 
+			gap: 10px !important;
+		  }
+
+		  /* 7. Ajuste del gráfico de radar para evitar desbordes verticales */
+		  canvas, img, svg {
+			max-width: 65% !important; /* Reducido levemente para ajustarse mejor a Carta */
+			height: auto !important;
+			display: block;
+			margin: 0 auto;
+		  }
+		}
+
     </style>
 </head>
 <body id="inicio">
@@ -115,8 +172,11 @@
 			</div>
 		</div>
 	</nav>
-
-
+<br>
+		<button onclick="window.print()" class="btn-imprimir">
+			🖨️ Exportar a PDF
+		</button>
+<br><br>		
     <main>
         <section id="hero" class="py-24 md:py-32 bg-white">
             <div class="max-w-5x1 mx-auto px-6 text-center">
@@ -394,7 +454,7 @@
                      
                  </div>
 				<br><br>
-                 <p class="text-center mt-12 text-gray-600">Haz clic en cualquier insignia para ver la verificación.</p>
+				<p class="text-center mt-12 text-gray-600 texto-instruccion-web">Haz clic en cualquier insignia para ver la verificación.</p>
             </div>
         </section>
 
