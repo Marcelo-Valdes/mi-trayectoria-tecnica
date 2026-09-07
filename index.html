@@ -135,6 +135,14 @@
 			display: block;
 			margin: 0 auto;
 		  }
+		  /* 9. Forzar dos columnas en Sello Profesional para impresión */
+		  .sello-columnas {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 20px !important;
+			margin-bottom: 10px !important;
+			page-break-inside: avoid; /* Evita que las listas se separen en dos páginas */
+		  }
 		}
 
     </style>
@@ -282,9 +290,9 @@
             Mi forma de trabajar se basa en la estabilidad, el orden y la responsabilidad, aportando criterio técnico y una ejecución enfocada en la continuidad operativa y la confiabilidad de los servicios.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sello-columnas">
             <ul class="space-y-4 text-gray-800">
-                <li class="flex items-start">
+				<li class="flex items-start">
                     <span class="text-blue-600 font-bold mr-2">•</span> Continuidad operativa como prioridad.
                 </li>
                 <li class="flex items-start">
