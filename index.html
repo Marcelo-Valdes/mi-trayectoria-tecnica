@@ -157,14 +157,14 @@
 		  }
 
 		  /* 10. Formación Académica (2 columnas) */
-		  .grid-formacion {
+		  #formacion .grid-formacion {
 			display: grid !important;
 			grid-template-columns: repeat(2, 1fr) !important;
 			gap: 15px !important;
 		  }
 
 		  /* 11. Evitar que las tarjetas individuales se corten por la mitad */
-		  .grid-formacion > div {
+		  #formacion .grid-formacion > div {
 			break-inside: avoid;
 		  }
 		}
@@ -205,7 +205,7 @@
                 <p class="mt-4 text-xl md:text-2xl text-blue-600 font-medium">Ingeniero‑operativo TI con experiencia en soporte, redes, hardware y continuidad operativa.<br>
 				</p>
                 <p class="mt-4 max-w-4x1 mx-auto text-gray-600 text-center md:whitespace-nowrap">| Trabajo en terreno, planta y oficina, instalando, configurando y manteniendo equipos y servicios de voz y datos.|<br> | Criterio y experiencia al servicio de la estabilidad y continuidad de los servicios.|</p>
-				<br><br><br>
+				<br><br>
                 <div class="mt-8 flex justify-center items-center space-x-6">
 				<button id="openContactModalBtn" aria-label="Mostrar información de contacto" class="bg-blue-500 text-white font-bold py-4 px-8 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center space-x-6">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
@@ -361,15 +361,16 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5">
-                        <div class="flex flex-wrap justify-center gap-2 mb-6">
-                            <button data-filter="all" class="skill-filter-btn active bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold">Todas</button>
-                            <button data-filter="Networking" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Networking</button>
-                            <button data-filter="Cloud" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Cloud</button>
-                            <button data-filter="Ciberseguridad" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Ciberseguridad</button>
-                            <button data-filter="Gestión y Operaciones" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Gestión y Operaciones</button>
-                            <button data-filter="Software y Aplicaciones" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Software y Aplicaciones</button>
-                            <button data-filter="Hardware e Infraestructura" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Hardware e Infraestructura</button>
-                        </div>
+			<!-- Se agrega print:hidden en la línea de las clases del contenedor principal -->
+						<div class="flex flex-wrap justify-center gap-2 mb-6 print:hidden">
+							<button data-filter="all" class="skill-filter-btn active bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold">Todas</button>
+							<button data-filter="Networking" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Networking</button>
+							<button data-filter="Cloud" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Cloud</button>
+							<button data-filter="Ciberseguridad" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Ciberseguridad</button>
+							<button data-filter="Gestión y Operaciones" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Gestión y Operaciones</button>
+							<button data-filter="Software y Aplicaciones" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Software y Aplicaciones</button>
+							<button data-filter="Hardware e Infraestructura" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Hardware e Infraestructura</button>
+						</div>
                         <div id="skills-container" class="flex flex-wrap justify-center gap-3 transition-all duration-300">
                         </div>
                     </div>
