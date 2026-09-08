@@ -133,20 +133,15 @@
 			display: block;
 			margin: 0 auto;
 		  }
-		  
-		 /* 8. Juntar secciones y permitir que fluyan entre páginas (Corrigiendo el desfase) */
-		 section, 
-		  #formacion, 
-		  #insignias,
-		  .grid-formacion, 
-		  .grid-insignias {
-			padding-top: 5px !important;
-			padding-bottom: 5px !important;
+
+		  /* 8. Juntar secciones (Reemplaza los py-20 de Tailwind) */
+		  section {
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
 			margin-top: 0 !important;
 			margin-bottom: 15px !important;
-			page-break-inside: auto !important; /* Libera el salto de página al contenedor padre */
-			break-inside: auto !important;
-		  }  
+			page-break-inside: auto !important; /* Permite saltos de página naturales */
+		  }
 
 		  section h2 {
 			margin-bottom: 15px !important;
@@ -160,22 +155,19 @@
 			margin-bottom: 10px !important;
 			page-break-inside: avoid;
 		  }
+
+		  /* 10. Formación Académica (2 columnas) */
+		  #formacion .grid-formacion {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 15px !important;
+		  }
+
+		  /* 11. Evitar que las tarjetas individuales se corten por la mitad */
+		  #formacion .grid-formacion > div {
+			break-inside: avoid;*/
+		  }
 		  
-		 /* 10. Ajuste de compresión para Formación e Insignias */
-		  .grid-formacion, 
-		  .grid-insignias {
-			gap: 10px !important; 
-			zoom: 0.95 !important; /* Escala ligeramente para evitar desbordes invisibles */
-		  }
-
-		 /* 11. Evitar que las tarjetas individuales se corten por la mitad */
-		  #formacion .grid-formacion > div,
-		  .grid-insignias > div,
-		  .grid-insignias > a {
-			break-inside: avoid !important;
-			page-break-inside: avoid !important;
-		  }
-
 		  /* 13. Reducir el espacio masivo entre el Título principal y Sobre Mí */
 		  header, #inicio {
 			padding-top: 0 !important;
