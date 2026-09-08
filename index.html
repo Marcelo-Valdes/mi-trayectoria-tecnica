@@ -174,6 +174,7 @@
 			padding-bottom: 5px !important;
 			margin-bottom: 0 !important;
 		  }
+		  
 		  #sobre-mi {
 			padding-top: 10px !important;
 			margin-top: 0 !important;
@@ -194,6 +195,7 @@
 			page-break-inside: avoid !important;
 			break-inside: avoid !important;
 		  }
+		  
 		  /* 17. Forzar que los títulos (h3) y las fechas (time) NUNCA se separen del párrafo */
 		  .timeline-item h3, 
 		  .timeline-item time {
@@ -214,13 +216,21 @@
 		  .ocultar-impresion {
 			display: none !important;
 		  }
+		  
 		  /* Ocultar elementos móviles (como el carrusel de insignias) en la impresión */
 		  .md\:hidden {
 			display: none !important;
 		  }
+		  
+		  /* 19. Forzar la impresión de TODAS las etiquetas/tags de Habilidades Técnicas */
+		  /* Ajusta el selector si tu contenedor de tags tiene un ID o clase específica */
+		  .flex.flex-wrap.justify-center.gap-2 > div.hidden,
+		  .flex.flex-wrap.justify-center.gap-2 > span.hidden {
+			display: inline-flex !important;
+		  }
+		
 		}
-
-
+		
     </style>
 </head>
 <body id="inicio">
