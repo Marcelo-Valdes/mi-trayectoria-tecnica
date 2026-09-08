@@ -179,12 +179,13 @@
 			margin-top: 0 !important;
 		  }
 
-		  /* 14. Evitar que un cargo en Experiencia Profesional se parta en dos páginas */
-		  #experiencia > div, 
-		  .bloque-experiencia {
+		  /* 14 y 18. Consolidar cada cargo para que NO se parta internamente entre páginas */
+		  .timeline-item {
 			page-break-inside: avoid !important;
 			break-inside: avoid !important;
-			margin-bottom: 15px !important;
+			display: inline-block !important; /* Truco técnico: fuerza a WebKit a tratar el div como un bloque sólido */
+			width: 100% !important;
+			margin-bottom: 20px !important;
 		  }
 
 		  /* 15. Evitar que las tarjetas de Insignias Digitales se corten por la mitad */
@@ -193,12 +194,12 @@
 			page-break-inside: avoid !important;
 			break-inside: avoid !important;
 		  }
-		  /* 17. Forzar que los títulos de los cargos NUNCA se separen de su descripción */
-		  .bloque-experiencia h3, 
-		  .bloque-experiencia h4,
-		  #experiencia h3 {
-			break-after: avoid !important;
+		  /* 17. Forzar que los títulos (h3) y las fechas (time) NUNCA se separen del párrafo */
+		  .timeline-item h3, 
+		  .timeline-item time {
 			page-break-after: avoid !important;
+			break-after: avoid !important;
+			margin-bottom: 4px !important;
 		  }
 
 		  /* 18. Consolidar el bloque completo para que no se parta internamente */
@@ -211,6 +212,10 @@
 
 		  /* Opcional: Si creaste la clase ocultar-impresion para el carrusel móvil, declárala aquí */
 		  .ocultar-impresion {
+			display: none !important;
+		  }
+		  /* Ocultar elementos móviles (como el carrusel de insignias) en la impresión */
+		  .md\:hidden {
 			display: none !important;
 		  }
 		}
@@ -250,7 +255,7 @@
                 <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">Marcelo Andrés Valdés Jiménez</h1>
                 <p class="mt-4 text-xl md:text-2xl text-blue-600 font-medium">Ingeniero‑operativo TI con experiencia en soporte, redes, hardware y continuidad operativa.<br>
 				</p>
-                <p class="mt-4 max-w-4x1 mx-auto text-gray-600 text-center md:whitespace-nowrap">| Trabajo en terreno, planta y oficina, instalando, configurando y manteniendo equipos y servicios de voz y datos.|<br> | Criterio y experiencia al servicio de la estabilidad y continuidad de los servicios.|</p>
+                <p class="mt-4 max-w-4xl mx-auto text-gray-600 text-center md:whitespace-nowrap">| Trabajo en terreno, planta y oficina, instalando, configurando y manteniendo equipos y servicios de voz y datos.|<br> | Criterio y experiencia al servicio de la estabilidad y continuidad de los servicios.|</p>
 				<br><br>
                 <div class="mt-8 flex justify-center items-center space-x-6">
 				<button id="openContactModalBtn" aria-label="Mostrar información de contacto" class="bg-blue-500 text-white font-bold py-4 px-8 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center space-x-6">
@@ -409,7 +414,7 @@
                     <div class="lg:col-span-5">
 			<!-- Se agrega print:hidden en la línea de las clases del contenedor principal -->
 						<div class="flex flex-wrap justify-center gap-2 mb-6 print:hidden">
-							<button data-filter="all" class="skill-filter-btn active bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold">Todas</button>
+							<button data-filter="all" class="skill-filter-btn active bg-blue-600 text-white py-2 px-4 rounded-full text-sm font-semibold">Clear</button>
 							<button data-filter="Networking" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Networking</button>
 							<button data-filter="Cloud" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Cloud</button>
 							<button data-filter="Ciberseguridad" class="skill-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-300">Ciberseguridad</button>
@@ -473,7 +478,7 @@
 		</section> 
 
         <section id="certificaciones" class="py-20 bg-white">
-            <div class="max-w-4x1 mx-auto px-6">
+            <div class="max-w-4xl mx-auto px-6">
 				<h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Insignias Digitales</h2>
 				<p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
 				Estas insignias acreditan la finalización y aprobación técnica de diplomados y cursos de especialización, no correspondiendo a certificaciones oficiales emitidas por los fabricantes.
